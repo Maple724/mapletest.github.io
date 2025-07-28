@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Development Roadmap for University Students</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Custom CSS to override/enhance Tailwind for the desired look */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f7f7; /* Light grey background */
+            color: #333; /* Darker text for better contrast on light background */
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff; /* White background for nav bar */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+
+        .nav-bar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-bar .menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar .menu li {
+            margin: 0 1rem;
+        }
+
+        .nav-bar .menu a {
+            color: #4a5568; /* Darker grey for nav links */
+            text-decoration: none;
+            font-weight: 500;
+            padding-bottom: 5px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        .nav-bar .menu a:hover {
+            color: #2b6cb0; /* Blue on hover */
+        }
+
+        .nav-bar .menu a.active {
+            color: #2b6cb0; /* Blue for active link */
+            border-bottom: 2px solid #2b6cb0; /* Blue underline for active link */
+        }
+
+        .nav-bar .nav-btn .btn {
+            background-color: #4299e1; /* Blue button */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-bar .nav-btn .btn:hover {
+            background-color: #2b6cb0; /* Darker blue on hover */
+        }
+
+        /* Hero Section */
+        .text-center h2 {
+            color: #1a202c; /* Very dark grey for main heading */
+        }
+
+        .text-center p {
+            color: #4a5568; /* Dark grey for hero paragraph */
+        }
+
+        /* Timeline Section */
+        .timeline-card {
+            background-color: #ffffff; /* White background for cards */
+            border: 1px solid #e2e8f0; /* Light grey border */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Subtle shadow */
+        }
+
+        .timeline-card h3 {
+            color: #1a202c; /* Dark text for card headings */
+        }
+
+        .timeline-card p {
+            color: #4a5568; /* Dark grey text for card descriptions */
+        }
+
+        .timeline-card ul li span {
+            color: #2d3748; /* Darker text for list items */
+        }
+
+        /* Labels (Foundation, Must Have, Optional, Advanced) - adjust if needed for better contrast */
+        .bg-green-500\/20 { background-color: rgba(16, 185, 129, 0.1); } /* Light green background */
+        .text-green-300 { color: #34d399; } /* Green text */
+
+        .bg-orange-500\/20 { background-color: rgba(249, 115, 22, 0.1); } /* Light orange background */
+        .text-orange-300 { color: #fb923c; } /* Orange text */
+
+        .bg-purple-500\/20 { background-color: rgba(168, 85, 247, 0.1); } /* Light purple background */
+        .text-purple-300 { color: #c084fc; } /* Purple text */
+
+        .bg-red-500\/20 { background-color: rgba(239, 68, 68, 0.1); } /* Light red background */
+        .text-red-300 { color: #ef4444; } /* Red text */
+
+
+        /* Learning Resources Section */
+        .resource-card {
+            background-color: #ffffff; /* White background for resource cards */
+            border: 1px solid #e2e8f0; /* Light grey border */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Subtle shadow */
+        }
+
+        .resource-card h3 {
+            color: #1a202c; /* Dark text for resource headings */
+        }
+
+        .resource-card .flex i {
+            color: #2b6cb0; /* Blue icons */
+        }
+        
+        .resource-card a {
+            color: #4299e1; /* Blue links */
+        }
+        .resource-card a:hover {
+            color: #2b6cb0; /* Darker blue on hover */
+        }
+
+        /* Footer */
+        footer p {
+            color: #718096; /* Medium grey for footer text */
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <header>
+    <div class="nav-bar">
+      <a href="" class="logo"><img src="logo.png" alt="Logo" style="height: 55px;"></a>
+      <div class="menu">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Roadmaps</a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-btn">
+        <a href="#"><button class="btn">Get Started</button></a>
+      </div>
+    </div>
+  </header>
+  <main class="container mx-auto px-4 md:px-8 py-16">
+
+        <section class="text-center mb-24">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900">Game Development Roadmap for Students</h2>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Your step-by-step guide to becoming a Game Developer. Start with the fundamentals and build your way up.</p>
+        </section>
+
+        <section id="roadmap" class="relative timeline-container pb-12 overflow-auto">
+
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">1. Programming Fundamentals</h3>
+                            <p class="text-gray-600 text-sm">Master core programming concepts and languages.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <img src="icons/cpp.png" alt="C++ Icon" style="width:24px; height:24px; margin-right:8px;">
+                                    C++ Basics & OOP
+                                </span>
+                                <span class="text-xs font-bold bg-green-500/20 text-green-700 px-2 py-1 rounded-full">Foundation</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <img src="icons/csharp.png" alt="C# Icon" style="width:24px; height:24px; margin-right:8px;">
+                                    C# Basics & OOP
+                                </span>
+                                <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <img src="icons/python.png" alt="Python Icon" style="width:24px; height:24px; margin-right:8px;">
+                                    Python (Scripting)
+                                </span>
+                                <span class="text-xs font-bold bg-purple-500/20 text-purple-700 px-2 py-1 rounded-full">Optional</span>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">2. Game Engines</h3>
+                            <p class="text-gray-600 text-sm">Learn to build games using industry-standard tools.</p>
+                        </div>
+                    </div>
+                   <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <img src="icons/unity.png" alt="Unity Icon" style="width:24px; height:24px; margin-right:8px;">
+                                Unity (C#)
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <img src="icons/unreal.png" alt="Unreal Engine Icon" style="width:24px; height:24px; margin-right:8px;">
+                                Unreal Engine (C++/Blueprints)
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <img src="icons/godot.png" alt="Godot Icon" style="width:24px; height:24px; margin-right:8px;">
+                                Godot (GDScript/C#)
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-700 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-3">
+                             <div>
+                                <h3 class="text-xl font-semibold text-gray-900">3. Game Design & Theory</h3>
+                                <p class="text-gray-600 text-sm">Understand the principles behind engaging games.</p>
+                            </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <i class="ph ph-strategy" style="width:24px; height:24px; margin-right:8px;"></i>
+                                Core Mechanics & Systems Design
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <i class="ph ph-scribble" style="width:24px; height:24px; margin-right:8px;"></i>
+                                Level Design
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-700 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <i class="ph ph-lightbulb" style="width:24px; height:24px; margin-right:8px;"></i>
+                                Narrative & World Building
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-700 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg bg-gray-100 border border-gray-300">
+                     <div class="flex items-center mb-3">
+                             <div>
+                                <h3 class="text-xl font-semibold text-gray-900">4. Graphics & Rendering</h3>
+                                <p class="text-gray-600 text-sm">Learn how games are visually brought to life.</p>
+                            </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <img src="icons/opengl.png" alt="OpenGL Icon" style="width:24px; height:24px; margin-right:8px;">
+                                OpenGL / DirectX Basics
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <i class="ph ph-paint-brush" style="width:24px; height:24px; margin-right:8px;"></i>
+                                Shaders (HLSL/GLSL)
+                            </span>
+                            <span class="text-xs font-bold bg-red-500/20 text-red-700 px-2 py-1 rounded-full">Advanced</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <i class="ph ph-camera" style="width:24px; height:24px; margin-right:8px;"></i>
+                                3D Modeling (Blender/Maya)
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-700 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg bg-gray-100 border border-gray-300">
+                     <div class="flex items-center mb-3">
+                             <div>
+                                <h3 class="text-xl font-semibold text-gray-900">5. Game Physics & AI</h3>
+                                <p class="text-gray-600 text-sm">Simulate realistic interactions and intelligent behaviors.</p>
+                            </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <i class="ph ph-scatter-plot" style="width:24px; height:24px; margin-right:8px;"></i>
+                                Collision Detection & Resolution
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <i class="ph ph-robot" style="width:24px; height:24px; margin-right:8px;"></i>
+                                Pathfinding (A*)
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-gray-700">
+                                <i class="ph ph-brain" style="width:24px; height:24px; margin-right:8px;"></i>
+                                Behavior Trees/State Machines
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-700 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                    <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg bg-gray-100 border border-gray-300">
+                            <div class="flex items-center mb-3">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900">6. Networking & Multiplayer</h3>
+                                    <p class="text-gray-600 text-sm">Enable players to interact across networks.</p>
+                                </div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <i class="ph ph-network" style="width:24px; height:24px; margin-right:8px;"></i>
+                                    Client-Server Model
+                                </span>
+                                <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <img src="icons/photon.png" alt="Photon Icon" style="width:24px; height:24px; margin-right:8px;">
+                                    Photon/Mirror (Unity)
+                                </span>
+                                <span class="text-xs font-bold bg-purple-500/20 text-purple-700 px-2 py-1 rounded-full">Optional</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <i class="ph ph-game-controller" style="width:24px; height:24px; margin-right:8px;"></i>
+                                    Dedicated Servers
+                                </span>
+                                <span class="text-xs font-bold bg-red-500/20 text-red-700 px-2 py-1 rounded-full">Advanced</span>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="timeline-item left">
+                    <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg bg-gray-100 border border-gray-300">
+                            <div class="flex items-center mb-3">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900">7. Audio & UI/UX</h3>
+                                    <p class="text-gray-600 text-sm">Enhance player experience with sound and intuitive interfaces.</p>
+                                </div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <i class="ph ph-speaker-h" style="width:24px; height:24px; margin-right:8px;"></i>
+                                    Sound Design & Implementation
+                                </span>
+                                <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <i class="ph ph-cursor-text" style="width:24px; height:24px; margin-right:8px;"></i>
+                                    User Interface (UI) Design
+                                </span>
+                                <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <i class="ph ph-hand-pointing" style="width:24px; height:24px; margin-right:8px;"></i>
+                                    User Experience (UX) Principles
+                                </span>
+                                <span class="text-xs font-bold bg-purple-500/20 text-purple-700 px-2 py-1 rounded-full">Optional</span>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="timeline-item right">
+                    <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg bg-gray-100 border border-gray-300">
+                            <div class="flex items-center mb-3">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900">8. Deployment & Optimization</h3>
+                                    <p class="text-gray-600 text-sm">Prepare and fine-tune your game for release.</p>
+                                </div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <i class="ph ph-rocket-launch" style="width:24px; height:24px; margin-right:8px;"></i>
+                                    Build & Release Process
+                                </span>
+                                <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <i class="ph ph-speedometer" style="width:24px; height:24px; margin-right:8px;"></i>
+                                    Performance Profiling
+                                </span>
+                                <span class="text-xs font-bold bg-orange-500/20 text-orange-700 px-2 py-1 rounded-full">Must Have</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="flex items-center text-gray-700">
+                                    <i class="ph ph-bug-beetle" style="width:24px; height:24px; margin-right:8px;"></i>
+                                    Debugging Techniques
+                                </span>
+                                <span class="text-xs font-bold bg-red-500/20 text-red-700 px-2 py-1 rounded-full">Advanced</span>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+
+        </section>
+
+        <section id="resources" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Recommended Courses & Certifications</h2>
+                <p class="text-lg text-gray-600 mt-2">Curated resources to master each skill on the roadmap.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-code text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Programming Fundamentals</h3>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <a href="https://www.udemy.com/course/beginning-c-plus-plus-programming/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-video"></i><span>Beginning C++ Programming (Udemy)</span></a>
+                        <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-file-code"></i><span>Microsoft C# Documentation</span></a>
+                        <a href="https://www.coursera.org/learn/programming-in-python" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-graduation-cap"></i><span>Python for Everybody (Coursera)</span></a>
+                    </div>
+                </div>
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-game-controller text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Game Engines</h3>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <a href="https://learn.unity.com/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-unity-logo"></i><span>Unity Learn</span></a>
+                        <a href="https://docs.unrealengine.com/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-rocket"></i><span>Unreal Engine Documentation</span></a>
+                        <a href="https://docs.godotengine.org/en/stable/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-code-block"></i><span>Godot Engine Docs</span></a>
+                    </div>
+                </div>
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-puzzle-piece text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Game Design & Theory</h3>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <a href="https://www.coursera.org/specializations/game-design" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-graduation-cap"></i><span>Game Design Specialization (Coursera)</span></a>
+                        <a href="https://www.gamasutra.com/category/design" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-article"></i><span>Gamasutra Articles (Design)</span></a>
+                        <a href="https://www.amazon.com/Art-Game-Design-Book-Lenses/dp/0123694965" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-book"></i><span>The Art of Game Design (Book)</span></a>
+                    </div>
+                </div>
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-palette text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Graphics & Rendering</h3>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <a href="https://learnopengl.com/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-square-half"></i><span>LearnOpenGL Tutorials</span></a>
+                        <a href="https://docs.microsoft.com/en-us/windows/win32/direct3d" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-microsoft-logo"></i><span>DirectX Graphics Documentation</span></a>
+                        <a href="https://www.blender.org/support/tutorials/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-cube"></i><span>Blender Tutorials</span></a>
+                    </div>
+                </div>
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-robot text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Game Physics & AI</h3>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <a href="https://www.udemy.com/course/game-physics/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-video"></i><span>The Complete Game Physics Course (Udemy)</span></a>
+                        <a href="https://www.raywenderlich.com/tag/pathfinding" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-paths"></i><span>Pathfinding Articles (Ray Wenderlich)</span></a>
+                        <a href="https://gameaipro.com/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-brain"></i><span>Game AI Pro (Book Series)</span></a>
+                    </div>
+                </div>
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-globe text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Networking & Multiplayer</h3>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <a href="https://doc.photonengine.com/en-us/pun/current/getting-started/pun-basics" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-network"></i><span>Photon PUN Documentation</span></a>
+                        <a href="https://mirror-networking.com/docs/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-link"></i><span>Mirror Networking Docs</span></a>
+                        <a href="https://www.gamedeveloper.com/business/15-tips-for-architecting-multiplayer-games" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-info"></i><span>Multiplayer Game Architecture Tips</span></a>
+                    </div>
+                </div>
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-microphone-stage text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Audio & UI/UX</h3>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <a href="https://www.audiokinetic.com/library/docs/wwise_tutorials/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-speaker-simple-high"></i><span>Wwise Tutorials (Audio)</span></a>
+                        <a href="https://www.gamedesigning.org/game-design-basics/game-ui-design/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-layout"></i><span>Game UI Design Guide</span></a>
+                        <a href="https://www.interaction-design.org/literature/topics/ux-design" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-user-list"></i><span>UX Design Basics</span></a>
+                    </div>
+                </div>
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-gray-100 border border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-rocket text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Deployment & Optimization</h3>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <a href="https://docs.unity3d.com/Manual/PublishingBuilds.html" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-upload-simple"></i><span>Unity Build & Publish Guide</span></a>
+                        <a href="https://docs.unrealengine.com/5.0/en-US/optimizing-unreal-engine-games/" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-gauge"></i><span>Unreal Engine Optimization</span></a>
+                        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/debugger-basics" target="_blank" class="flex items-center space-x-2 hover:text-blue-600 transition-colors"><i class="ph-bug"></i><span>Debugging Basics (Visual Studio)</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-12">
+        <p class="text-gray-500">&copy; 2024 Your Name/Brand. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>
